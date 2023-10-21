@@ -1,0 +1,113 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #222260;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    column-gap: 20px;
+    row-gap: 15px;
+    text-align: center;
+    justify-content: center;
+    max-width: 1300;
+}
+
+.cal {
+    color: black;
+    background-color: #d6d4d4;
+    border-spacing: 0;
+    border-radius: 25px 25px;
+    font-weight: 600;
+    padding: 20px 10px 10px 10px;
+    cursor: pointer;
+}
+
+.cal caption {
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 25px;
+    background-color: #2e2e6e;
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: -15px;
+    padding: 5px 10px;
+    letter-spacing: 3px;
+}
+
+.cal th {
+    border-bottom: 1px solid #1a17175f;
+    margin-bottom: 5px;
+}
+
+
+.cal th,
+.cal td {
+    text-align: center;
+    margin-right: 10px;
+    font-size: 13px;
+}
+
+td:first-of-type,
+th:first-of-type {
+    color: red;
+    }
+
+.cal td {
+    padding-bottom: 5px;
+    position: relative;
+}
+
+span {
+    position: absolute;
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 2px;
+    font-size: 12px;
+    bottom: -10px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+td:hover span {
+    opacity: 1;
+}
+
+
+
+@media (max-width: 865px) {
+    .calendar {
+        grid-template-columns: repeat(3, 200px);
+    }
+}
+
+@media (max-width: 665px) {
+    .calendar {
+        grid-template-columns: repeat(2, 200px);
+}
+    h1 {
+        font-size: 40px;
+    }
+}
+@media (max-width: 400px) {
+    .calendar {
+        grid-template-columns: 300px;
+    }
+    h1 {
+        font-size: 30px;
+    }
+}
